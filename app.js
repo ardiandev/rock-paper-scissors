@@ -1,13 +1,32 @@
+const startBtn = document.getElementById("start-btn");
+let btnText = startBtn.innerText;
+
 const choices = ["rock", "paper", "scissors"];
 let playerScore = 0;
 
-function game() {
+// function game() {
+//   const restart = restartGame();
+//   for (let i = 1; i <= 5; i++) {
+//     playRound(i);
+//   }
+// }
+
+const game = async () => {
+  const restart = await restartGame();
   for (let i = 1; i <= 5; i++) {
     playRound(i);
+  }
+};
+
+function restartGame() {
+  if (btnText === "Start") {
+    startBtn.innerText = "Play again";
+    console.log("Play again");
   }
 }
 
 function playRound(round) {
+  const restart = restartGame();
   const computerChoice = getComputerChoice();
   const playerChoice = getPlayerChoice();
   const winner = getWinner(playerChoice, computerChoice);
@@ -70,4 +89,7 @@ function getWinner(player, computer) {
   return "Computer";
 }
 
-game();
+startBtn.addEventListener("click", () => {
+  game();
+});
+// game();

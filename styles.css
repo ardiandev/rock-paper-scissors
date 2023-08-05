@@ -33,3 +33,8 @@ body {
   max-width: 120px;
   padding: 0 10px;
 }
+
+#start-btn {
+  padding: 10px 30px;
+  font-size: 25px;
+}
