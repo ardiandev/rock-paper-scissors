@@ -1,40 +1,78 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
+  padding: 20px 10px;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.title {
   text-align: center;
+}
+
+.info-div {
+  /* border: 1px solid black; */
+  /* margin: 10px 0; */
+  height: 80px;
+
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.show-choice,
-.score-board,
-.choices {
+
+.info-div button {
+  margin: 5px 0;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.choice-div {
+  /* border: 1px solid black; */
+  padding: 10px 0;
+
   display: flex;
-  border: 1px solid black;
-  width: 100%;
-  max-width: 500px;
-  justify-content: space-between;
-  padding: 20px;
-  margin: 10px;
-  font-size: 25px;
+  justify-content: center;
+  gap: 10px;
 }
 
-.choices button {
-  font-size: 25px;
+.choice-div button {
   padding: 5px 10px;
+  margin: 10px 0;
 }
 
-.player,
-.computer {
+.display-score-text {
+  text-align: center;
+  padding: 10px;
+}
+
+.display-score-board {
   border: 1px solid black;
-  width: 100%;
-  max-width: 120px;
-  padding: 0 10px;
+  padding: 10px 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(1, 1fr); */
 }
 
-#start-btn {
-  padding: 10px 30px;
-  font-size: 25px;
+.player-div,
+.comp-div {
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+.copyright {
+  text-align: center;
 }
