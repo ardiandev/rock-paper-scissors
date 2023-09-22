@@ -16,10 +16,16 @@ body {
   width: 100%;
   max-width: 600px;
   margin: 30px auto;
+  border: 1px solid black;
 }
 
 .title {
   text-align: center;
+  font-size: 45px;
+}
+
+.display-score-text {
+  font-size: 30px;
 }
 
 .info-div {
@@ -58,8 +64,38 @@ body {
   padding: 10px;
 }
 
-.display-score-board {
+.player-div,
+.comp-div {
   border: 1px solid black;
+  margin: 20px;
+  height: 100%;
+  max-height: 70px;
+  font-size: 18px;
+  border-radius: 10px;
+  text-align: center;
+  /* background-color: slategray; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.info {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.info-div button {
+  margin: 10px;
+  background-color: brown;
+  color: white;
+  padding: 7px 10px;
+  border: 1px solid transparent;
+}
+
+.display-score-board {
+  /* border: 1px solid black; */
+  margin: 10px;
   padding: 10px 0;
 
   display: grid;
@@ -67,12 +103,23 @@ body {
   /* grid-template-rows: repeat(1, 1fr); */
 }
 
-.player-div,
-.comp-div {
-  /* border: 1px solid black; */
-  text-align: center;
+.choice-div button {
+  background-color: steelblue;
+  color: white;
+  font-size: 18px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 7px 10px;
 }
 
+.choice-div button:hover {
+  /* background-color: white; */
+  /* color: steelblue; */
+  /* border: 1px solid black; */
+  transform: scale(0.9);
+}
 .copyright {
   text-align: center;
+  font-size: 18px;
+  font-weight: bold;
 }
